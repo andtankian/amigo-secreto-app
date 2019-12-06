@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
+import 'izitoast/dist/css/iziToast.min.css';
 
 // Import root app
 import App from 'containers/App';
