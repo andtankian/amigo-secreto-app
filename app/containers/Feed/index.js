@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import { useVerticalNavbarController } from '@redwallsolutions/vertical-navbar-component-module';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -22,10 +23,17 @@ import { loadFeed } from './actions';
 export function Feed({ dispatch, people }) {
   useInjectReducer({ key: 'feed', reducer });
   useInjectSaga({ key: 'feed', saga });
-
+  const navbarController = useVerticalNavbarController();
   useEffect(() => {
+    navbarController.startLoading();
+    navbarController.setActiveItem(2);
     dispatch(loadFeed());
   }, []);
+
+  useEffect(() => {
+    if (people) navbarController.finishLoading();
+  }, [people]);
+
   return (
     <div>
       <Helmet>

@@ -277,10 +277,15 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.4.3", "@babel/parser@^7.7.4":
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.4.3":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.4.tgz#75ab2d7110c2cf2fa949959afb05fa346d2231bb"
   integrity sha512-jIwvLO0zCL+O/LmEJQjWA75MQTWwx3c3u2JOTDK5D3/9egrWRRA0/0hk9XXywYnXZVVpzrBYeIQTmhwUaePI9g==
+
+"@babel/parser@^7.7.4":
+  version "7.7.5"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.5.tgz#cbf45321619ac12d83363fcf9c94bb67fa646d71"
+  integrity sha512-KNlOe9+/nk4i29g0VXgl8PEXIRms5xKLJeuZ6UptN0fHv+jDiriG+y94X6qAgWTR0h3KaoM1wK5G5h7MHFRSig==
 
 "@babel/plugin-proposal-async-generator-functions@^7.2.0":
   version "7.7.4"
@@ -774,10 +779,17 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
   integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2":
+  version "7.7.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.5.tgz#4b087f183f5d83647744d4157f66199081d17a00"
+  integrity sha512-UXhClKWTL7/vlYX49kETXti6VbpPJK/pdsIOqUMhUUES/lqThpNTsmC/0aU/IW4uozDUx17axjeqel7SCYF6EQ==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -834,7 +846,7 @@
     find-root "^1.1.0"
     source-map "^0.7.2"
 
-"@emotion/cache@^10.0.17":
+"@emotion/cache@^10.0.14", "@emotion/cache@^10.0.17":
   version "10.0.19"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.19.tgz#d258d94d9c707dcadaf1558def968b86bb87ad71"
   integrity sha512-BoiLlk4vEsGBg2dAqGSJu0vJl/PgVtCYLBFJaEO8RmQzPugXewQCXZJNXTDFaRlfCs0W+quesayav4fvaif5WQ==
@@ -892,7 +904,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.6.tgz#004b98298d04c7ca3b4f50ca2035d4f60d2eed1b"
   integrity sha512-h4t4jFjtm1YV7UirAFuSuFGyLa+NNxjdkq6DpFLANNQY5rHueFZHVY+8Cu1HYVP6DrheB0kv4m5xPjo7eKT7yQ==
 
-"@emotion/serialize@^0.11.12", "@emotion/serialize@^0.11.14":
+"@emotion/serialize@^0.11.12", "@emotion/serialize@^0.11.14", "@emotion/serialize@^0.11.8":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.14.tgz#56a6d8d04d837cc5b0126788b2134c51353c6488"
   integrity sha512-6hTsySIuQTbDbv00AnUO6O6Xafdwo5GswRlMZ5hHqiFx+4pZ7uGWXUQFW46Kc2taGhP89uXMXn/lWQkdyTosPA==
@@ -1170,13 +1182,14 @@
     react-spinners "^0.6.1"
 
 "@redwallsolutions/card-component-module@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@redwallsolutions/card-component-module/-/card-component-module-2.0.0.tgz#f1c0d138895d770e032aabccbcd2d9d51066cc3b"
-  integrity sha512-Pb2INbedPURDnOjHyLx+rS56W3blXfaQO5jSXvKeY73LfoYF6c2CIjfrfJn3BF/Wp0UGL82GZnVcuxHtdHNsbw==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@redwallsolutions/card-component-module/-/card-component-module-2.0.2.tgz#f6d79aaefd1613db83597b38fdf4e59218416349"
+  integrity sha512-A1bUqKFGeXhQdv7f9J2Nr9mDTs+PRmx337/sy5BIHOMFLhX/uq6XsacZC3E5oFvU9FmBIGnoHnBcNUrpi5iVdA==
   dependencies:
     "@redwallsolutions/button-component-module" "^1.8.0"
     "@redwallsolutions/common-interfaces-ts" "^1.0.2"
     "@redwallsolutions/dropdown-component-module" "^1.1.1"
+    "@redwallsolutions/skeleton-loader-component-module" "^2.0.0"
     "@redwallsolutions/theming-component-module" "^2.0.2"
     color "^3.1.2"
     react-ink "^6.4.0"
@@ -1203,9 +1216,9 @@
     react-ink "^6.4.0"
 
 "@redwallsolutions/form-component-module@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@redwallsolutions/form-component-module/-/form-component-module-2.3.1.tgz#8b24d72a643977c4251006ef48fe575a364f604e"
-  integrity sha512-2Wk9qK39ad3MgtWewiwXhGdWahBXP9cLcI7//0rfmQfnIthocqrw2x2DF6cp3XwjJ/pb9th8O6rctwxZ6c4UGQ==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@redwallsolutions/form-component-module/-/form-component-module-2.3.2.tgz#31075add1683c6f365c792d649b0ca0d9469a351"
+  integrity sha512-MxB4X7NZGRmBTeEfoPTcpqVBRmvMGt+7TNVd268OxRgdhIhUGCQktUfZ/c1nnCtgaJRa4M7aeigzGzp32nPVaA==
   dependencies:
     "@redwallsolutions/common-interfaces-ts" "^1.0.2"
     "@redwallsolutions/theming-component-module" "^2.0.2"
@@ -1237,6 +1250,17 @@
     "@redwallsolutions/theming-component-module" "^2.0.2"
     color "^3.1.2"
     react-particles-js "^2.7.0"
+    styled-components "^4.4.1"
+
+"@redwallsolutions/skeleton-loader-component-module@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@redwallsolutions/skeleton-loader-component-module/-/skeleton-loader-component-module-2.0.0.tgz#3bca1cb83e31975e8c81ae0ba563239a5729c2e9"
+  integrity sha512-JPlIUaHzJjRlc1DjtMgeiEcpHyjWaFdimrIJuUUP+us8mW3fYaXSZJIvGDYxL00PSFu6AfDIBEDAblxrZngUZg==
+  dependencies:
+    "@redwallsolutions/common-interfaces-ts" "^1.0.2"
+    "@redwallsolutions/theming-component-module" "^2.0.2"
+    color "^3.1.2"
+    react-loading-skeleton "^1.3.0"
     styled-components "^4.4.1"
 
 "@redwallsolutions/theming-component-module@^2.0.1", "@redwallsolutions/theming-component-module@^2.0.2":
@@ -1985,7 +2009,7 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-emotion@^10.0.22:
+babel-plugin-emotion@^10.0.22, babel-plugin-emotion@^10.0.23:
   version "10.0.23"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.23.tgz#040d40bf61dcab6d31dd6043d10e180240b8515b"
   integrity sha512-1JiCyXU0t5S2xCbItejCduLGGcKmF3POT0Ujbexog2MI4IlRcIn/kWjkYwCUZlxpON0O5FC635yPl/3slr7cKQ==
@@ -3182,6 +3206,16 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
+create-emotion@^10.0.14:
+  version "10.0.14"
+  resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-10.0.14.tgz#4c140aaef6a9588ed47c926f9c4679e4719be43e"
+  integrity sha512-5G4naKMxokOur+94eDz7iPKBfwzy4wa/+0isnPhxXyosIQHBq7yvBy4jjdZw/nnRm7G3PM7P9Ug8mUmtoqcaHg==
+  dependencies:
+    "@emotion/cache" "^10.0.14"
+    "@emotion/serialize" "^0.11.8"
+    "@emotion/sheet" "0.9.3"
+    "@emotion/utils" "0.11.2"
+
 create-emotion@^9.2.12:
   version "9.2.12"
   resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-9.2.12.tgz#0fc8e7f92c4f8bb924b0fef6781f66b1d07cb26f"
@@ -3928,6 +3962,14 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
+
+emotion@^10.0.17:
+  version "10.0.23"
+  resolved "https://registry.yarnpkg.com/emotion/-/emotion-10.0.23.tgz#b1722ca65f4d9955f0917cfcb7635bc34b52805c"
+  integrity sha512-H/x+5rJUnSvI0rdYsAFyDfuQwE0poZgTMj5TQsKirLzyHVWqs6CiUponsdE86sisXw0vS60j91HAbidJJeDt1g==
+  dependencies:
+    babel-plugin-emotion "^10.0.23"
+    create-emotion "^10.0.14"
 
 emotion@^9.1.2:
   version "9.2.12"
@@ -7149,6 +7191,11 @@ lodash.get@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -9206,6 +9253,14 @@ react-app-polyfill@0.2.2:
     raf "3.4.1"
     whatwg-fetch "3.0.0"
 
+react-countdown-now@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/react-countdown-now/-/react-countdown-now-2.1.2.tgz#b93d153fbb7a8d359beb32ecbf1de29d15f026c7"
+  integrity sha512-BgRnsxV2vnvyJAefDBigTX+ngX6eGd2xl6DIFdZPIZkbx0mzxlMEeoEQG01JyeHDjqaXFUpIonIbx1yYyaMwzg==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.7.2"
+
 react-dom@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -9270,6 +9325,13 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-loading-skeleton@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-loading-skeleton/-/react-loading-skeleton-1.3.0.tgz#e256bb5322712c82ddf86ee16e0530ebb7d4f347"
+  integrity sha512-uB4Re8QLOS5hauTdssWxvTXVBevygCDPWngjsbTVBRQVn14hKoB9OMX/KjU5ccuXtrPbwvQPUwylon/dYFf5bQ==
+  dependencies:
+    emotion "^10.0.17"
 
 react-particles-js@^2.7.0:
   version "2.7.0"

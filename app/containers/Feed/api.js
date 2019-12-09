@@ -1,7 +1,7 @@
 // import axios from 'axios';
 // import { baseApiUrl } from '../../apiConfig';
 export function loadFeed() {
-  return new Promise(function(resolve) {
+  return new Promise(resolve => {
     resolve({
       data: {
         holder: {
@@ -20,8 +20,8 @@ export function loadFeed() {
               fullName: 'Another Person',
               suggestions: [
                 { id: 1, description: 'Camiseta X YZ' },
-                { id: 1, description: 'Another Thing HEHE Lorem' },
-                { id: 1, description: 'The quick brown fox jump in...' },
+                { id: 2, description: 'Another Thing HEHE Lorem' },
+                { id: 3, description: 'The quick brown fox jump in...' },
               ],
             },
             {
