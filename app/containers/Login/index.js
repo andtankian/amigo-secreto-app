@@ -17,30 +17,34 @@ import LoginR from '@redwallsolutions/login-component-module';
 import makeSelectLogin from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { tryToLogin } from './actions';
+import { tryToLogin, register } from './actions';
 
-// let loginController;
+let loginController;
 
 export function Login({ dispatch }) {
   useInjectReducer({ key: 'login', reducer });
   useInjectSaga({ key: 'login', saga });
-  const getLoginController = () => {
-    // loginController = controller;
+  const getLoginController = controller => {
+    loginController = controller;
   };
 
   const onFrontSubmit = credentials => {
     dispatch(tryToLogin(credentials));
   };
 
+  const onBackSubmit = profile => {
+    dispatch(register({ profile, loginController }));
+  };
   return (
     <div>
       <Helmet>
-        <title>Login</title>
+        <title>Login </title>
         <meta name="description" content="Description of Login" />
       </Helmet>
       <LoginR
         getLoginController={getLoginController}
         onFrontSubmit={onFrontSubmit}
+        onBackSubmit={onBackSubmit}
       />
     </div>
   );

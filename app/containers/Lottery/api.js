@@ -1,12 +1,6 @@
 import axios from 'axios';
+import { baseApiUrl } from '../../apiConfig';
 
 export function loadFinalTime() {
-  console.log(axios);
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve({
-        data: { holder: { models: [{ finalTime: Date.now() + 10000 }] } },
-      });
-    }, 1000);
-  });
+  return axios.get(`${baseApiUrl}/profiles/lotterytime`);
 }

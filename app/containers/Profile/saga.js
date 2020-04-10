@@ -1,15 +1,15 @@
-import { takeLatest, call, put, delay } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import iziToast from 'izitoast';
 import * as api from './api';
 import * as actions from './actions';
 import { getModel } from '../../utils/general';
 import { LOAD_PROFILE, UPDATE_PROFILE } from './constants';
 
-function* loadProfile({ profileId }) {
+function* loadProfile() {
   try {
-    const response = yield call(api.loadProfile, profileId);
+    const loggedIn = JSON.parse(localStorage.getItem('loggedIn'));
+    const response = yield call(api.loadProfile, loggedIn.user.id);
     const profile = getModel(response);
-    yield delay(2000);
     yield put(actions.loadProfilesuccess(profile));
   } catch ({ message }) {
     iziToast.error({
@@ -21,11 +21,11 @@ function* loadProfile({ profileId }) {
 function* updateProfile(action) {
   try {
     const newSuggestions = getNewSuggestions(action.profile);
-    yield call(api.addSuggestions, newSuggestions);
-    const oldSuggestions = getOldSuggestions(action.profile);
-    yield call(api.updateSuggestions, oldSuggestions);
+    console.log(newSuggestions);
+    yield call(addSuggestions, newSuggestions);
+    // const oldSuggestions = getOldSuggestions(action.profile);
+    // yield call(api.updateSuggestions, oldSuggestions);
     yield call(api.updateProfile, action.profile);
-    yield delay(2000);
     yield put(actions.updateProfileSuccess(action.profile));
     iziToast.success({ message: 'Alterações realizadas.' });
   } catch ({ message }) {
@@ -33,12 +33,17 @@ function* updateProfile(action) {
   }
 }
 
-function getOldSuggestions(profile) {
-  return getSuggestionsByType('old', profile);
-}
+// function getOldSuggestions(profile) {
+//   return getSuggestionsByType('old', profile);
+// }
 
 function getNewSuggestions(profile) {
   return getSuggestionsByType('new', profile);
+}
+
+async function addSuggestions(suggestions) {
+  const requests = suggestions.map(suggestion => api.addSuggestion(suggestion));
+  await Promise.all(requests);
 }
 
 function getSuggestionsByType(type, profile) {

@@ -16,3 +16,6 @@ export const tryToLogin = credentials => {
     },
   );
 };
+
+export const register = profile =>
+  axios.post(`${baseApiUrl}/profiles`, profile);

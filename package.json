@@ -1,16 +1,16 @@
 {
-  "name": "react-boilerplate",
-  "version": "4.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "secret-santa-app",
+  "version": "1.0.0",
+  "description": "React APP para interface de controle para sorteio de amigo secreto.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/andtankian/secret-santa-app.git"
   },
   "engines": {
     "npm": ">=5",
     "node": ">=8.15.1"
   },
-  "author": "Max Stoiber",
+  "author": "Andrew Ribeiro",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",

@@ -7,7 +7,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import Card from '@redwallsolutions/card-component-module';
-import { MdPerson } from 'react-icons/md';
+// import { MdPerson } from 'react-icons/md';
 import Fluid from './Fluid';
 
 function List({ people = [] }) {
@@ -20,9 +20,9 @@ function List({ people = [] }) {
               <Fluid order={index + 1}>
                 <Card
                   headerText={person.fullName}
+                  subHead={person.username}
                   shouldFitContainer
                   isReady
-                  thumbnail={<MdPerson />}
                 >
                   {person.suggestions && (
                     <ul className="list-group">

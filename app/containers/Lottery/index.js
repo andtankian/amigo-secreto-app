@@ -21,7 +21,10 @@ import saga from './saga';
 import { loadFinalTime, timeout as actionTimeout } from './actions';
 import Fluid from '../../components/List/Fluid';
 
-export function Lottery({ dispatch, lottery: { finalTime, timeout } }) {
+export function Lottery({
+  dispatch,
+  lottery: { finalTime, timeout, profile },
+}) {
   useInjectReducer({ key: 'lottery', reducer });
   useInjectSaga({ key: 'lottery', saga });
 
@@ -69,12 +72,14 @@ export function Lottery({ dispatch, lottery: { finalTime, timeout } }) {
             onComplete={getKrisKringer}
           />
         )}
-        {timeout && (
+        {timeout && profile && (
           <Fluid>
             <div className="text-center">
               <h2>
                 Você tirou <br />
-                <strong>Letícia</strong>
+                <strong>
+                  {profile.krissKringle && profile.krissKringle.fullName}
+                </strong>
                 <br />
                 <span role="img" aria-label="emoji">
                   🎉

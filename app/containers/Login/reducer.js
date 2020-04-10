@@ -4,7 +4,7 @@
  *
  */
 import produce from 'immer';
-import { DEFAULT_ACTION, LOGIN_FAIL } from './constants';
+import { DEFAULT_ACTION, REGISTER_SUCCESS, LOGIN_SUCCESS } from './constants';
 
 export const initialState = {};
 
@@ -14,8 +14,11 @@ const loginReducer = (state = initialState, action) =>
     switch (action.type) {
       case DEFAULT_ACTION:
         break;
-      case LOGIN_FAIL:
-        draft.error = action.error;
+      case REGISTER_SUCCESS:
+        draft.success = true;
+        break;
+      case LOGIN_SUCCESS:
+        draft.loggedIn = action.loggedIn;
     }
   });
 

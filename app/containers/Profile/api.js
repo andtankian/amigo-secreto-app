@@ -1,31 +1,22 @@
 import axios from 'axios';
+import querystring from 'query-string';
 import { baseApiUrl } from '../../apiConfig';
 
 export function loadProfile(profileId) {
-  // return axios.get(`${baseApiUrl}/profile/${profileId}`)
-  console.log(axios, baseApiUrl, profileId);
-  return {
-    data: {
-      holder: {
-        models: [
-          {
-            id: 1,
-            fullName: 'Andrew Ribeiro',
-            username: 'andrew.ribeiro',
-            suggestions: [
-              {
-                id: 1,
-                description: 'Camiseta, num sei o que...',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  };
+  return axios.get(`${baseApiUrl}/profiles/${profileId}`);
 }
 
-export function updateProfile(/* profile */) {}
+export function updateProfile(profile) {
+  return axios.put(
+    `${baseApiUrl}/profiles/${profile.id}`,
+    querystring.stringify(profile),
+  );
+}
 
+export function addSuggestion(suggestion) {
+  return axios.post(
+    `${baseApiUrl}/suggestions`,
+    querystring.stringify(suggestion),
+  );
+}
 export function updateSuggestions(/* suggestions */) {}
-export function addSuggestions(/* suggestions */) {}

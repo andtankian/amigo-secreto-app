@@ -4,7 +4,7 @@
  *
  */
 import produce from 'immer';
-import { LOAD_FINAL_TIME_SUCCESS, TIMEOUT } from './constants';
+import { LOAD_FINAL_TIME_SUCCESS, TIMEOUT_SUCCESS } from './constants';
 
 export const initialState = {};
 
@@ -16,8 +16,9 @@ const lotteryReducer = (state = initialState, action) =>
         draft.finalTime = action.finalTime;
         draft.timeout = false;
         break;
-      case TIMEOUT: {
+      case TIMEOUT_SUCCESS: {
         draft.timeout = true;
+        draft.profile = action.profile;
       }
     }
   });

@@ -4,7 +4,12 @@
  *
  */
 
-import { LOAD_FINAL_TIME, LOAD_FINAL_TIME_SUCCESS, TIMEOUT } from './constants';
+import {
+  LOAD_FINAL_TIME,
+  LOAD_FINAL_TIME_SUCCESS,
+  TIMEOUT,
+  TIMEOUT_SUCCESS,
+} from './constants';
 
 export function loadFinalTime() {
   return {
@@ -21,5 +26,11 @@ export function loadFinalTimeSuccess(finalTime) {
 export function timeout() {
   return {
     type: TIMEOUT,
+  };
+}
+export function timeoutSuccess(profile) {
+  return {
+    type: TIMEOUT_SUCCESS,
+    profile,
   };
 }

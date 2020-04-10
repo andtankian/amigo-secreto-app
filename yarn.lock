@@ -1240,9 +1240,9 @@
     styled-components "^4.4.0"
 
 "@redwallsolutions/login-component-module@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@redwallsolutions/login-component-module/-/login-component-module-2.0.3.tgz#548e8faf994ebb136179fd35d3ecdfd61047cd1e"
-  integrity sha512-xVbm9KYLsFTxUgwx6qLWiSW924nuD3qVxIuOicizqubqjxgdOdkA5ZOHZ/j00apuqLDhez1sE6BFy9qRSUNHKA==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@redwallsolutions/login-component-module/-/login-component-module-2.0.4.tgz#36095a2ab38545fcca4e0690c9f23bc4e8636696"
+  integrity sha512-dCxwZVWWFnjKFSU0sH2HXat0dbCpwVaBhhlbifB0MDWh/wg97iuffi5zcjaLBgoADWtNoFHhElu1G1vKVYXBsA==
   dependencies:
     "@redwallsolutions/button-component-module" "^1.8.3"
     "@redwallsolutions/common-interfaces-ts" "^1.0.2"
