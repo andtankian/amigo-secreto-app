@@ -19,4 +19,7 @@ export function addSuggestion(suggestion) {
     querystring.stringify(suggestion),
   );
 }
-export function updateSuggestions(/* suggestions */) {}
+
+export function clearAllSuggestions(profileId) {
+  return axios.delete(`${baseApiUrl}/suggestions/profile/${profileId}/delete`);
+}

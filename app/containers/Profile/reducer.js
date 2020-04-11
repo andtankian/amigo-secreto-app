@@ -9,6 +9,7 @@ import {
   LOAD_PROFILE_SUCCESS,
   UPDATE_PROFILE_SUCCESS,
   UPDATE_PROFILE,
+  UPDATE_PROFILE_FAIL,
 } from './constants';
 
 export const initialState = {};
@@ -27,6 +28,10 @@ const profileReducer = (state = initialState, action) =>
         break;
       case UPDATE_PROFILE_SUCCESS:
         draft.saveButtonLoading = false;
+        break;
+      case UPDATE_PROFILE_FAIL:
+        draft.saveButtonLoading = false;
+        break;
     }
   });
 

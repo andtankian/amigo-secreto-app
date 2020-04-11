@@ -31,7 +31,6 @@ export function Lottery({
   const navbarController = useVerticalNavbarController();
 
   useEffect(() => {
-    navbarController.startLoading();
     dispatch(loadFinalTime());
   }, []);
 
@@ -77,9 +76,7 @@ export function Lottery({
             <div className="text-center">
               <h2>
                 Você tirou <br />
-                <strong>
-                  {profile.krissKringle && profile.krissKringle.fullName}
-                </strong>
+                <strong>{profile.friend && profile.friend.fullName}</strong>
                 <br />
                 <span role="img" aria-label="emoji">
                   🎉

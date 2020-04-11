@@ -18,38 +18,38 @@ function* loadProfile() {
   }
 }
 
-function* updateProfile(action) {
+function* updateProfile({ profile }) {
   try {
-    const newSuggestions = getNewSuggestions(action.profile);
-    console.log(newSuggestions);
-    yield call(addSuggestions, newSuggestions);
-    // const oldSuggestions = getOldSuggestions(action.profile);
-    // yield call(api.updateSuggestions, oldSuggestions);
-    yield call(api.updateProfile, action.profile);
-    yield put(actions.updateProfileSuccess(action.profile));
+    const suggestions = getSuggestions(profile);
+    yield call(api.clearAllSuggestions, profile.id);
+    yield addSuggestions(suggestions);
+    const response = yield call(api.updateProfile, profile);
+    const updatedProfile = getModel(response);
+    yield put(actions.updateProfileSuccess(updatedProfile));
     iziToast.success({ message: 'Alterações realizadas.' });
   } catch ({ message }) {
     iziToast.error({ message });
+    yield put(actions.updateProfileFail());
   }
 }
 
-// function getOldSuggestions(profile) {
-//   return getSuggestionsByType('old', profile);
-// }
-
-function getNewSuggestions(profile) {
-  return getSuggestionsByType('new', profile);
+function* addSuggestions(suggestions) {
+  const allSuggestions = [];
+  for (let index = 0; index < suggestions.length; index++) { // eslint-disable-line
+    const suggestion = suggestions[index];
+    const registeredSuggestion = yield call(api.addSuggestion, suggestion);
+    allSuggestions.push(registeredSuggestion);
+  }
+  return allSuggestions;
 }
 
-async function addSuggestions(suggestions) {
-  const requests = suggestions.map(suggestion => api.addSuggestion(suggestion));
-  await Promise.all(requests);
-}
-
-function getSuggestionsByType(type, profile) {
+function getSuggestions(profile) {
   return Object.keys(profile)
-    .filter(key => key.startsWith(type))
-    .map(key => ({ 'profile.id': profile.id, description: profile[key] }));
+    .filter(key => key.includes('description'))
+    .map(key => ({
+      'profile.id': profile.id,
+      description: profile[key],
+    }));
 }
 
 // Individual exports for testing

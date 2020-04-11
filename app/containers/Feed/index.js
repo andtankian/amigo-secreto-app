@@ -25,7 +25,6 @@ export function Feed({ dispatch, people }) {
   useInjectSaga({ key: 'feed', saga });
   const navbarController = useVerticalNavbarController();
   useEffect(() => {
-    navbarController.startLoading();
     navbarController.setActiveItem(2);
     dispatch(loadFeed());
   }, []);

@@ -17,9 +17,8 @@ function SuggestionsPlace({ suggestions = [] }) {
     setSuggestionsState([
       ...suggestionsState,
       {
-        isNew: true,
         description: '',
-        id: suggestionsState.length + Math.random() * 100,
+        id: parseInt(Math.random() * 1000, 10),
       },
     ]);
   };
@@ -50,9 +49,7 @@ function SuggestionsPlace({ suggestions = [] }) {
               <div className="row">
                 <div className="col-md-10">
                   <InputField
-                    field={`${suggestion.isNew ? 'new' : 'old'}-sugg-${
-                      suggestion.isNew ? index : suggestion.id
-                    }`}
+                    field={`description${suggestion.id}`}
                     label={`Sugestão ${index + 1}`}
                     initialValue={suggestion.description}
                     shouldFitContainer

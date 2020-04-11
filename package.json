@@ -65,9 +65,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.4.3",
-    "@redwallsolutions/button-component-module": "^1.8.3",
-    "@redwallsolutions/card-component-module": "^2.0.0",
-    "@redwallsolutions/form-component-module": "^2.3.1",
+    "@redwallsolutions/button-component-module": "^1.9.0",
+    "@redwallsolutions/card-component-module": "^2.1.2",
+    "@redwallsolutions/form-component-module": "^2.4.1",
     "@redwallsolutions/login-component-module": "^2.0.3",
     "@redwallsolutions/skeleton-loader-component-module": "^2.0.0",
     "@redwallsolutions/vertical-navbar-component-module": "^3.2.5",

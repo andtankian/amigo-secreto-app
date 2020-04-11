@@ -34,7 +34,6 @@ export function Profile({ dispatch, page: { profile, saveButtonLoading } }) {
 
   useEffect(() => {
     navbarController.setActiveItem(3);
-    navbarController.startLoading();
     dispatch(loadProfile(1));
   }, []);
 
