@@ -87,7 +87,7 @@
     "ip": "1.1.5",
     "izitoast": "^1.4.0",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "moment": "^2.24.0",
     "prop-types": "15.7.2",
     "query-string": "^6.9.0",
